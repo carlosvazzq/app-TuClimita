@@ -1,4 +1,4 @@
-# App del Clima "Climita
+# App del Clima "TuClimita"
 
 Pequeña aplicación web desarrollada para la materia de Desarrollo de Software Multiplataforma, la cual consume la API pública de **Open-Meteo** para mostrar el pronóstico del tiempo en tiempo real[cite: 1, 2].
 
