@@ -24,7 +24,6 @@ function getUserCoordinates() {
       resolve({ ...DEFAULT_COORDINATES, isDefault: true });
       return;
     }
-
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
         resolve({
