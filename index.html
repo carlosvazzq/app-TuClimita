@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101a35">
+  <meta name="description" content="Consulta el clima local con TuClimita.">
+  <title>TuClimita | Clima Local</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="weather-app">
+    <header class="app-header">
+      <a class="brand" href="#" aria-label="TuClimita, inicio">
+        <span class="brand-icon" aria-hidden="true">☀</span>
+        <span>TuClimita</span>
+      </a>
+      <span class="header-label">Tu clima, de un vistazo</span>
+    </header>
+
+    <p class="loading-message" id="weather-loading" role="status">Cargando clima...</p>
+
+    <section class="weather-card" aria-labelledby="page-title" aria-busy="true">
+      <div class="card-top">
+        <div>
+          <p class="eyebrow">EL TIEMPO AHORA</p>
+          <h1 id="page-title">Clima Local</h1>
+          <p class="location"><span aria-hidden="true">⌖</span> <span id="location-name">Buscando ubicación...</span></p>
+        </div>
+        <span class="weather-icon" role="img" aria-label="Estado del tiempo">⛅</span>
+      </div>
+
+      <div class="current-weather">
+        <p class="temperature"><span id="temperature-value">--</span><span>°</span></p>
+        <div class="condition">
+          <p class="condition-name" id="weather-condition">Esperando datos...</p>
+          <p class="feels-like">Condiciones meteorológicas actuales</p>
+        </div>
+      </div>
+
+      <div class="weather-divider"></div>
+
+      <section class="details" aria-label="Detalles del clima">
+        <article class="detail-card">
+          <span class="detail-icon" aria-hidden="true">💧</span>
+          <div>
+            <p class="detail-label">Humedad</p>
+            <p class="detail-value">--<span>%</span></p>
+          </div>
+        </article>
+        <article class="detail-card">
+          <span class="detail-icon" aria-hidden="true">💨</span>
+          <div>
+            <p class="detail-label">Viento</p>
+            <p class="detail-value" id="wind-value">-- <span>km/h</span></p>
+          </div>
+        </article>
+        <article class="detail-card">
+          <span class="detail-icon" aria-hidden="true">☀</span>
+          <div>
+            <p class="detail-label">Índice UV</p>
+            <p class="detail-value">-- <span>UV</span></p>
+          </div>
+        </article>
+      </section>
+    </section>
+
+    <div class="error-message" id="weather-error" role="alert" aria-live="assertive" hidden>
+    </div>
+
+    <footer class="app-footer">
+      <p>Un vistazo al cielo, estés donde estés.</p>
+    </footer>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
